@@ -1,60 +1,71 @@
 .page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  
+  background-color: rgb(243, 243, 243);
 }
 
 .login-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 250px;
 
-    font: 14px sans-serif;
-    color: #ffffff;
+  font: 14px sans-serif;
+  color: #ffffff;
 
-    background-color: #000000;
-    border-radius: 10px;
+  background-color: #000000;
+  border-radius: 10px;
 }
 
 .login-form__header {
-    margin-bottom: 5px;
+  padding: 0;
+  margin: 0 0 5px;
 
-    font-size: 1.5em;
+  font: 1.5em sans-serif;
 }
 
 .login-form__input {
-    display: block;
-    padding: 5px 10px;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 5px;
+  display: block;
+  padding: 5px 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 5px;
 
-    font-size: 1em;
+  font-size: 1em;
 
-    border-width: 0;
-    border-radius: 5px;
-}
-
-.login-form__check {
-    margin: 0;
-    padding-left: 0;
-    display: flex;
+  border-width: 0;
+  border-radius: 5px;
 }
 
 .login-form__btn {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .login-form__btn:active {
-    background-color: #0000ff; /* поменять */
+  background-color: #0000ff;
 }
 
 .login-form__error {
-    width: 100%;
+  width: 100%;
 
-    color: #ff0000;
-    text-align: center;
+  color: #ff0000;
+  text-align: center;
+}
+
+.login-form__restore,
+.login-form__restore:visited {
+  color: #0000ff;
+}
+
+.login-form__restore:active {
+  color: #ff0000;
+}
+
+.login-form__restore:hover {
+  text-decoration: none;
 }

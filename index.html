@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Вход на сайт</title>
-    </head>
-    
-    <body class="page">
-        <form class="login-form">
-            <span class="login-form__header">Авторизация</span>
-            <input class="login-form__input login-form__email" name="email" placeholder="email">
-            <input class="login-form__input login-form__password" name="password" type="password" placeholder="пароль">
-            <label  class="login-form__input login-form__check">
-                <input class="login-form__memory" type="checkbox" value="memory"> - запомнить на 24 часа
-            </label>
-            <span class="login-form__error"></span>
-            <input class="login-form__input login-form__btn" type="button" value="войти">
-        </form>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css?=8">
+    <title>Вход на сайт</title>
+  </head>
+  
+  <body class="page">
+    <form class="login-form">
+      <h1 class="login-form__header">Авторизация</h1>
+      <input class="login-form__input login-form__email" name="email" placeholder="email">
+      <input class="login-form__input login-form__password" name="password" type="password" placeholder="пароль">
+      <span class="login-form__error"></span>
+      <input class="login-form__input login-form__btn" type="button" value="войти">
+      <a class="login-form__restore" href="#">забыли пароль?</a>
+    </form>
 
-        <script src="script.js"></script>
-    </body>
+    <p style="color: darkgray;">(Данные для входа в <a href="/user.json" target="_blank">user.json</a>)</p>
+
+    <script src="script.js?=13"></script>
+  </body>
 </html>
