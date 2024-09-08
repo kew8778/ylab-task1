@@ -1,5 +1,3 @@
 {
-  "user-1@mail.ru": "12345",
-  "user-2@mail.ru": "",
-  "user-3@mail.ru": "abcde"
+  "user@mail.ru": "12345"
 }

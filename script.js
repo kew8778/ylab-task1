@@ -8,10 +8,10 @@ const error = form.querySelector('.login-form__error');
 const btn = form.querySelector('.login-form__btn');
 
 // привязываем к кнопке обработчик клика
-btn.addEventListener('click', async () => {  
-  // если введённый email не валидный, выводим сообщение об этом
-  if ( isValidEmail(inpEmail.value) === false ) {
-    error.textContent = 'Вы некорректно ввели email';
+btn.addEventListener('click', async () => {
+  // вывод ошибок при некоректно-заполненных полях
+  showError(inpEmail.value, inpPassword.value);
+  if (error.textContent) {
     return;
   }
 
@@ -33,9 +33,23 @@ btn.addEventListener('click', async () => {
   }
 });
 
-// проверка корректности введённого email
-function isValidEmail(email) {
-  return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email);
+// вывод ошибок при некоретно-заполненных полях
+function showError(email, password) {
+  if ( !(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) ) {
+    error.textContent = 'Вы некорректно ввели email';
+    return;
+  } else if (email.length >= 256 || email.length <= 6) {
+    error.textContent = 'Неверная длина email';
+    return;
+  } else if ( (/\s/.test(password)) ) {
+    error.textContent = 'Некоректный пароль';
+    return;
+  } else if (password.length >= 20 || password.length <= 4) {
+    error.textContent = 'Неверная длина пароля';
+    return;
+  } else {
+    return;
+  }
 }
 
 // проверка введённых данных в БД
